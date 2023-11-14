@@ -9,13 +9,22 @@
             src: url(fonts/zh-cn.ttf);
         }
 
-        a, p, h2, .title {
+        body {
+            background-image: url(images/FIXEDbgmainmenu.png);
+            background-size: cover;
+            background-position-y: -100px;
+            background-repeat: no-repeat;
+            background-color: black;
+        }
+
+        a, p, h2, .subtitle, .title {
             font-family: GenshinFont;
+            color: white;
         }
 
         .title {
             text-align: center;
-            font-size: 50px;
+            font-size: 75px;
         }
 
         .subtitle {
@@ -41,8 +50,9 @@
         }
 
         .hyperlink2 {
-            color: rgb(112, 102, 102);
+            color: rgb(182, 182, 182);
         }
+
     </style>
 </head>
 
@@ -56,24 +66,42 @@
         <p class="imhere">I am here for...</p>
 
         <div class="center">
-            <a href="Support.html" class="hyperlink2">Contact</a>
+            <a href="Support.html" class="hyperlink2" onclick="playAudioAndNavigate(event);">Contact</a>
             <p>I need help for something!</p>
         </div>
 
         <div class="center">
-            <a href="coins lb.html" class="hyperlink2">Leaderboards</a>
+            <a href="coins lb.html" class="hyperlink2" onclick="playAudioAndNavigate(event);">Leaderboards</a>
             <p>I just wanna see the rankings</p>
         </div>
 
         <div class="center">
-            <a href="FAQ.html" class="hyperlink2">Frequently asked questions</a>
+            <a href="FAQ.html" class="hyperlink2" onclick="playAudioAndNavigate(event);">Frequently asked questions</a>
             <p>I have a question about the application...</p>
         </div>
 
         <div class="center">
-            <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="hyperlink">Nevermind...</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" onclick="audio.play();" class="hyperlink">Nevermind...</a>
         </div>
     </main>
+    
+    <script>
+        const audio = new Audio();
+        audio.src = "sounds/click.mp3";
+
+        function playAudioAndNavigate(event) {
+            // Play audio
+            audio.play();
+
+            // Prevent the default behavior of the link
+            event.preventDefault();
+
+            // Wait for the audio to finish playing and then navigate to the link
+            audio.onended = function() {
+                window.location.href = event.target.href;
+            };
+        }
+    </script>
 </body>
 
 </html>

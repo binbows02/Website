@@ -12,13 +12,30 @@
 
         p {
             font-family: GenshinFont;
+            color: white;
         }
 
         body {
-            background-image: url(images/bg\ art\ faded.png);
-            background-position: -1000px;
-            background-position-y: -200px;
+            background-image: url(images/BG\ IMG\ FIXED\ COINS.png);
+            background-position-x: -800px;
+            background-position-y: -100px;
+            background-size: cover;
             background-repeat: no-repeat;
+            position: relative;
+            background-color: black;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            inset: 0;
+            background:black;
+            opacity: .35;
         }
 
         .pfps {
@@ -31,10 +48,11 @@
         .title, .main_title {
             text-align: center;
             font-family: GenshinFont;
+            color: white;
         }
 
         .main_title {
-            font-size: 50px;
+            font-size: 75px;
         }
 
         .username {
@@ -62,11 +80,6 @@
             margin-bottom: 100px;
         }
 
-        .spaces {
-            margin-bottom: 20px;
-            color: white;
-        }
-
         .center {
             text-align: center;
             margin-top: -15px;
@@ -74,27 +87,27 @@
         }
 
         .link {
+            margin-top: 200px;
             color: rgb(97, 104, 204);
             font-weight: bold;
             font-family: GenshinFont;
         }
 
-        .sub, .subtitle {
+        .sub {
             text-align: center;
             margin-top: -20px;
-            color: darkgray;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            font-family: GenshinFont;
         }
 
         .small { 
             width: 75px;
         }
 
-        .gif  {
-            margin-top: 50px;
-            width: 250px;
-        }
-
         .border {
+            font-family: GenshinFont;
+            text-align: center;
             border: 2px solid black;
             padding: 10px;
             background-color: gold;
@@ -103,6 +116,16 @@
         .rcenter {
             text-align: center;
         }
+
+        .selection {
+            margin-top: 100px;
+            margin-bottom: -40px;
+        }
+
+        .colored-hyp {
+            color: rgb(210, 229, 255);
+        }
+    
     </style>
 </head>
 
@@ -111,21 +134,21 @@
     
     <div> <!--title-->
         <h1 class="main_title">Steppets</h1>
-        <p class="sub">Stepcounter game</p>
+        <h4 class="sub">Stepcounter game</h4>
     </div>
 
-    <div> <!--Leaderboard type-->
-        <a href="coins lb.html">Coins</a>
+    <div class="title selection"> <!--Leaderboard type-->
+        <a href="coins lb.html" class="colored-hyp">Coins</a>
         <a href="exp lb">EXP</a>
         <a href="steps lb">Steps</a>
         <a href="pet lb">Pet level</a>
     </div>
 
     <div>
-        <p class="spaces">-</p>
-        <h1 class="border title">Leaderboards</h1>
-        <p class="subtitle">Coins</p>
-        <p class="spaces">-</p>
+        <p class=>&nbsp;</p>
+        <h1 class="border">Leaderboards</h1>
+        <p class="subtitle rcenter">Coins</p>
+        <p>&nbsp;</p>
     </div>
 
     <main> <!-- Players -->
@@ -134,10 +157,10 @@
             <p class="rank1">#1</p>
             <p class="username">@Verases</p>
             <p>Active pet: Canine <span class="username">(5 Star)</span></p>
-            <p class="steps">Steps: 50,192</p>
+            <p class="steps">Coins: 163,000</p>
+            <p>Steps: 50,192</p>
             <p>EXP: 10,000</p>
-            <p>Coins: 100,000</p>
-            <p class="spaces">-</p>
+            <p>&nbsp;</p>
         </div>
 
         <div>
@@ -145,10 +168,10 @@
             <p class="rank">#2</p>
             <p class="username">@SwagGamer</p>
             <p>Active pet: Leech <span class="username">(5 Star)</span></p>
-            <p class="steps">Steps: 32,103</p>
-            <p>EXP: 7,000</p>
-            <p>Coins: 59,000</p>
-            <p class="spaces">-</p>
+            <p class="steps">Coins: 59,000</p>
+            <p>Steps: 71,103</p>
+            <p>EXP: 13,400</p>
+            <p>&nbsp;</p>
         </div>
 
         <div>
@@ -156,10 +179,10 @@
             <p class="rank">#3</p>
             <p class="username">@NoUsername</p>
             <p>Active pet: Jewelry <span class="username">(3 Star)</span></p>
-            <p class="steps">Steps: 23,101</p>
+            <p class="steps">Coins: 2,000</p>
+            <p>Steps: 23,101</p>
             <p>EXP: 1,000</p>
-            <p>Coins: 2,000</p>
-            <p class="spaces">-</p>
+            <p>&nbsp;</p>
         </div>
 
         <div>
@@ -167,10 +190,10 @@
             <p class="rank">#4</p>
             <p class="username">@secks</p>
             <p>Active pet: Gibson <span class="username">(1 Star)</span></p>
-            <p class="steps">Steps: 502</p>
+            <p class="steps">Coins: 1,000</p>
+            <p>Steps: 502</p>
             <p>EXP: 500</p>
-            <p>Coins: 1,000</p>
-            <p class="spaces">-</p>
+            <p>&nbsp;</p>
         </div>
 
         <div>
@@ -178,9 +201,9 @@
             <p class="rank">#5</p>
             <p class="username">@you_gay</p>
             <p>Active pet: Sus <span class="username">(1 Star)</span></p>
-            <p class="steps">Steps: 23,101</p>
-            <p>EXP: 500</p>
-            <p>Coins: 1,000</p>
+            <p class="steps">Coins: 1,000</p>
+            <p>Steps: 888</p>
+            <p>EXP: 700</p>
         </div>
     </main>
 
@@ -188,10 +211,13 @@
         <p class="empty">&nbsp;</p>
         <h2 class="title">More to come soon! (jk fuck you)</h2>
         <p class="center">For more info, contact us below</p>
-        <a href="https://discord.gg/Sqm6jg3RMb" class="link" target="_blank">Discord</a>
     </div>
 
-    <img src="images/dog-hand-shake.gif" class="gif" alt="test">
+    <div class="rcenter link">
+        <a href="https://discord.gg/Sqm6jg3RMb" class="link" target="_blank">Discord</a>
+    </div>
 </body>
+
+<p class= empty>&nbsp;</p>
 
 </html>
