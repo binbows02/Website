@@ -8,7 +8,10 @@
 </head>
 
 <body>
-    <a href="main_menu.html"><img src="images/return.png" class="small" alt="Main menu"></a>
+    <img src="images/return.png" 
+    class="small" 
+    alt="Main menu"
+        onclick="sfx('main_menu.html')"></a>
     
     <div> <!--title-->
         <h1 class="main_title">Steppets</h1>
@@ -16,9 +19,9 @@
     </div>
 
     <div class="title selection"> <!--Leaderboard type-->
-        <a href="coins lb.html" class="colored-hyp">Coins</a>
-        <a href="EXP lb.html">EXP</a>
-        <a href="Steps lb.html">Steps</a>
+        <a class="colored-hyp" onclick="sfx('coins lb.html')">Coins</a>
+        <a class="uncolored-hyp" onclick="sfx('EXP lb.html')">EXP</a>
+        <a class="uncolored-hyp" onclick="sfx('Steps lb.html')">Steps</a>
     </div>
 
     <div>
@@ -91,11 +94,13 @@
     </div>
 
     <div class="rcenter link">
-        <a href="https://discord.gg/Sqm6jg3RMb" class="link" target="_blank">Discord</a>
+        <a class="link" onclick="open_website()">Discord</a>
     </div>
 
 </body>
 
 <p class= empty>&nbsp;</p>
+
+<script src="coins lb.js"></script>
 
 </html>

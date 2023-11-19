@@ -9,7 +9,7 @@ p {
 }
 
 body {
-    background-image: url(images/BG\ IMG\ FIXED\ COINS.png);
+    background-image: url(images/fixed\ ewip1.png);
     background-position-x: -800px;
     background-position-y: -100px;
     background-size: cover;
@@ -38,7 +38,7 @@ body::after {
     margin-right: 10px;
 }
 
-.title, 
+.title,
 .main_title {
     text-align: center;
     font-family: GenshinFont;
@@ -85,6 +85,11 @@ body::after {
     color: rgb(97, 104, 204);
     font-weight: bold;
     font-family: GenshinFont;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 .sub {
@@ -95,8 +100,9 @@ body::after {
     font-family: GenshinFont;
 }
 
-.small { 
+.small {
     width: 75px;
+    cursor: pointer;
 }
 
 .border {
@@ -118,4 +124,20 @@ body::after {
 
 .colored-hyp {
     color: rgb(210, 229, 255);
+    cursor: pointer;
+}
+
+.colored-hyp:hover {
+    color: rgb(255, 224, 138);
+    text-decoration: underline;
+}
+
+.uncolored-hyp {
+    color: rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+.uncolored-hyp:hover {
+    color: rgb(255, 224, 138);
+    text-decoration: underline;
 }

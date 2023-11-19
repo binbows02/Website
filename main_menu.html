@@ -2,11 +2,22 @@
 <html lang="en">
 
 <head> <!--CSS-->
-    <title>Steppets</title>
+    <title>Stepweb</title>
     <link rel="stylesheet" type="text/css" href="main_menu.css">
 </head>
 
 <body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="link" class="navtext">Game</a>
+            <a href="characters.html" class="navtext">Characters</a>
+            <a href="about us.html" class="navtext">About us</a>
+        </nav>
+
+        <a href="login.html" class="logintext">Login</a>
+    </header>
+
     <div> <!--Title-->
         <h1 class="title">Steppets</h1>
         <h4 class="subtitle">Stepcounter game</h4>
@@ -16,39 +27,27 @@
         <p class="imhere">I am here for...</p>
 
         <div class="center">
-            <a href="Contact.html" class="hyperlink2" onclick="playAudioAndNavigate(event);">Contact</a>
-            <p class="gray-text">I need help for something!</p>
+            <a class="hyperlink2" onclick="contact_sfx('Contact.html')">Contact</a>
+            <p class="gray-text">I want to contact you guys!</p>
         </div>
 
         <div class="center">
-            <a href="coins lb.html" class="hyperlink2" onclick="playAudioAndNavigate(event);">Leaderboards</a>
+            <a class="hyperlink2" onclick="contact_sfx('coins lb.html')">Leaderboards</a>
             <p class="gray-text">I just wanna see the rankings</p>
         </div>
 
         <div class="center">
-            <a href="FAQ.html" class="hyperlink2" onclick="playAudioAndNavigate(event);">Frequently asked questions</a>
+            <a class="hyperlink2" onclick="contact_sfx('FAQ.html')">Frequently asked questions</a>
             <p class="gray-text">I have a question about the application...</p>
         </div>
 
         <div class="center">
-            <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" onclick="audio.play();" class="hyperlink">Nevermind...</a>
+            <a onclick="open_website()" class="hyperlink">Nevermind...</a>
         </div>
     </main>
     
-    <script>
-        const audio = new Audio();
-        audio.src = "sounds/click.mp3";
+    <script src="main_menu.js"></script>
 
-        function playAudioAndNavigate(event) {
-            audio.play();
-
-            event.preventDefault();
-
-            audio.onended = function() {
-                window.location.href = event.target.href;
-            };
-        }
-    </script>
 </body>
 
 </html>
