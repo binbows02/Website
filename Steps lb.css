@@ -9,7 +9,7 @@ p {
 }
 
 body {
-    background-image: url(/images/steps\ bg.png);
+    background-image: url(images/steps\ bg.png);
     background-position-x: -600px;
     background-position-y: -200px;
     background-size: cover;
