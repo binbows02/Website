@@ -4,7 +4,7 @@ function contact_sfx(location) {
 
     setTimeout(function () {
         window.location.href = location;
-    }, 250);
+    }, 300);
 
     cursor = pointer;
 }
