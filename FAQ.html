@@ -3,10 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stepweb - FAQ</title>
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="style-faq.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <a href="main_menu.html">Main menu</a>
-    <p>nothing here yet</p>
+
+    <a href="main_menu.html"><img src="images/return.png" class="icon" alt="Main menu"></a>
+
+    <div class="title-position">
+
+    <h1 class="main-title">Steppets</h1>
+    <h4 class="sub">Stepcounter game</h4>
+
+    </div>
+
+    <div class="wrapper">
+
+        <h1> Frequently Asked Questions</h1>
+            <div class="faq active">
+                <button class="accordion">
+                    1. How do I install the game?
+                    <i class='bx bx-chevron-down' ></i>
+                </button>
+                <div class="pannel">
+                    <p>Installation instructions can be found in the game's manual. Typically, you can insert the installation disc or download the game from the official website and follow the on-screen instructions.</p>
+                </div>
+            </div>
+            <div class="faq active">
+                <button class="accordion">
+                    2. What are the system requirements?
+                    <i class='bx bx-chevron-down' ></i>
+                </button>
+                <div class="pannel">
+                    <p>Check the system requirements section on the game's official website for detailed information on minimum and recommended hardware specifications.</p>
+                </div>
+            </div>
+    
+                <div class="faq active">
+                    <button class="accordion">
+                        3. How do I play the game?
+                        <i class='bx bx-chevron-down' ></i>
+                    </button>
+                    <div class="pannel">
+                        <p>Refer to the in-game tutorial or manual for instructions on gameplay, controls, and objectives. You can also customize controls in the game settings.</p>
+                    </div>
+                </div>
+                <div class="faq active">
+                    <button class="accordion">
+                        4. I'm experiencing crashes. What should I do?
+                        <i class='bx bx-chevron-down' ></i>
+                    </button>
+                    <div class="pannel">
+                        <p>Ensure that your computer meets the minimum system requirements specified for the game.
+                            Inadequate hardware may lead to instability. If the issue persists, contact our support team via [support email or link]. Provide details about your system specifications, when the crashes occur, and any error messages received.</p>
+                    </div>
+                </div>
+                <div class="faq active">
+                    <button class="accordion">
+                        5. How do I create an account?
+                        <i class='bx bx-chevron-down' ></i>
+                    </button>
+                    <div class="pannel">
+                        <p>Click on the "Sign Up" button, and you will be directed to a registration form. Complete the required fields, which typically include: Email address and Password</p>
+                    </div>
+                </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName
+        ("accordion");
+        var i;
+        
+        for ( i= 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function
+            () {
+                this.classList.toggle("active");
+                this.parentElement.classList.toggle
+                ("active");
+                
+                var pannel = this.nextElementSibling;
+
+                if(pannel.style.display === "block"){
+                    pannel.style.display = "none";
+                }
+                else {
+                    pannel.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
