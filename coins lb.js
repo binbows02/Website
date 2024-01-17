@@ -9,6 +9,19 @@ function sfx(location) {
     cursor = pointer;
 }
 
+
+function open_site() {
+    let audio = new Audio("sounds/click.mp3");
+    audio.play();
+
+    setTimeout(function () {
+        window.location.href = "https://binbows02.github.io/Steppets/main%20menu/main%20menu.html";
+    }, 300);
+
+    cursor = pointer;
+}
+
+
 function open_website() {
     let audio = new Audio("sounds/click.mp3");
     audio.play();
